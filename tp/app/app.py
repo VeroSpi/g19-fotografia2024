@@ -2,7 +2,7 @@
 # cd app --> flask --app app run --debug
 
 from flask import Flask, render_template, request, redirect, url_for
-from base_de_datos import conexionMySQL
+from controller_db import conexionMySQL,ver_contactos
 
 app = Flask(__name__)
 
@@ -15,9 +15,10 @@ def Inicio():
 # Sección Contacto
 @app.route("/contacto")
 def Contacto():
-    conexion = conexionMySQL()
+    contacto = ver_contactos()
     title = "contacto"
-    return render_template("contacto.html", title=title, conexion=conexion)
+    return render_template("contacto.html", title=title,
+    contacto =contacto)
 
 # Sección Conóceme
 @app.route("/conoceme")
