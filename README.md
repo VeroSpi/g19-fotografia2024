@@ -1,5 +1,3 @@
-# tp-back-end
-
 ## Información del Curso
 
 Este proyecto fue desarrollado como parte del curso **Codo a codo – Desarrollo Full Stack Python 2024**. 🎓
