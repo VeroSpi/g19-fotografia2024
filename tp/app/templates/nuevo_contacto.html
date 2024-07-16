@@ -1,0 +1,72 @@
+{% include 'defaults/head.html' %}
+{% include 'defaults/header.html' %}
+
+<body>
+    <div class="separacion">
+        <br>
+    </div>
+    <div class="titulo-contacto">
+        <h2>
+            Agregar contacto
+        </h2>
+    </div>
+    <hr>
+    <form class="agregar-contacto" action="/guardar_contacto" method="POST">
+        <button class="button">
+            <img src="/static/img/index/flecha-hacia-atras.png" height="30px" width="30px" alt="flecha volver">
+            <a href="/contacto">Volver</a>
+        </button>
+        
+        <br>
+        <div>
+            <input type="hidden" name="id" value="{{contacto[0]}}">
+        </div>
+        <div>
+            <label for="nombre">Nombre
+            <br><input type="text" name="nombre" required>
+        </label>
+        </div>
+        <div>
+            <label for="apellido">Apellido
+            <br>
+            <input type="text" name="apellido" required>
+            </label>
+        </div>
+        <div>
+            <label for="email">Mail
+            <br>
+            <input type="text" name="email" required>
+            </label>
+            
+        </div>
+        <div>
+            <label for="telefono">Teléfono
+            <br>
+            <input type="text" name="telefono" required>
+            </label>
+            
+        </div>
+
+        <div>
+            <label for="fecha">Fecha del evento (dd/mm/yyyy)
+            <br>
+            <input type="date" name="fecha_evento">
+            </label>
+            
+        </div>
+        <br>
+        <div>
+            <button class="button" >
+                Agregar Contacto
+            </button>
+        </div>
+    </form> 
+
+</body>
+
+<div class="separacion">
+    <br>
+</div>
+
+
+{% include 'defaults/footer.html' %}

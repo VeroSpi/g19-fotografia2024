@@ -1,0 +1,71 @@
+{% include 'defaults/head.html' %}
+{% include 'defaults/header.html' %}
+
+<body>
+    <div class="separacion">
+        <br>
+    </div>
+    <div class="titulo-contacto">
+        <h2>
+            Editar contacto
+        </h2>
+    </div>
+    <hr>
+    <form class="agregar-contacto" action="/editar_contacto" method="POST">
+        <button class="button">
+            <img src="/static/img/index/flecha-hacia-atras.png" height="30px" width="30px" alt="flecha volver">
+            <a href="/contacto">Volver</a>
+        </button>
+
+        <div>
+            <input type="hidden" name="id" value="{{contacto[0]}}">
+        </div>
+        <br>
+        <div>
+            <label for="nombre">Nombre
+            <br><input type="text" name="nombre" value="{{contacto[1]}}" required>
+        </label>
+        </div>
+        <div>
+            <label for="apellido">Apellido
+            <br>
+            <input type="text" value="{{contacto[2]}}" name="apellido" required>
+            </label>
+        </div>
+        <div>
+            <label for="email">Mail
+            <br>
+            <input type="text" value="{{contacto[3]}}" name="email" required>
+            </label>
+            
+        </div>
+        <div>
+            <label for="telefono">Teléfono
+            <br>
+            <input type="text" value="{{contacto[4]}}" name="telefono" required>
+            </label>
+            
+        </div>
+
+        <div>
+            <label for="fecha_evento">Fecha del evento (dd/mm/yyyy)
+            <br>
+            <input value="{{contacto[5]}}" type="date" name="fecha_evento">
+            </label>
+            
+        </div>
+        <br>
+        <div>
+            <button class="button" >
+                Guardar Edición
+            </button>
+        </div>
+    </form> 
+
+</body>
+
+<div class="separacion">
+    <br>
+</div>
+
+{% include 'defaults/footer.html' %}

@@ -1,86 +1,175 @@
 {% include 'defaults/head.html' %}
 {% include 'defaults/header.html' %}
 
-<body>
+<body >
+
+    <div class="separacion">
+        <br>
+    </div>
+
     <div class="titulo-contacto">
         <h1>Contacto</h1>
     </div>
-    <div class="contenedor-general-contactos">
-
-            <div class="cont-contacto">
-                <div class="subtitulo-contacto"> 
-                    <h2>Fotografa</h2>
-                </div>
-                <h3><a href="" id="whatsapp"><i class="fa-brands fa-square-whatsapp"></i></a><a href=""> +541170975959</a></h3>
-                <h3><a href="" id="mail"><i class="fa-solid fa-envelope"></i></i></a><a href=""> fotografia@fotografia.com</a></h3>
-                <h3><a href="" id="instagram"><i class="fa-brands fa-square-instagram"></i></a><a href=""> @Fotografia</a></h3>
-                <h3><a href="" id="ubicacion"><i class="fa-solid fa-location-dot"></i></a> Balcarce 78, C1064 Cdad. Autónoma de Buenos Aires</h3>
+    <hr>
+    <div  class="contenedor-general-contactos">
         
-                <div class="mapa">
+        <div class="cont-contacto">
+                <div> 
+                    <h1>
+                        <img src="/static/img/contacto/argentina.png"  height="30px" width="30px" alt="bandera">
+                        Carolina Silva
+                    </h1>
+                </div>
+            
+                <h3>
+                    <img src="/static/img/contacto/whatsapp.png"  height="20px" width="20px" alt="Telefono">        
+                    <a href="tel:+54 11 7097-5959">+54 11 7097-5959</a>
+                </h3>
+                <h3>
+                    <img src="/static/img/contacto/email.png" height="20px" width="20px" alt="email">
+                    <a href="mailto:Carolina.Silva@gmail.com"> Carolina.Silva@gmail.com</a>
+                </h3>
+                <h3>
+                    <img src="/static/img/contacto/imagen ig.png" alt="instagram" height="20px" width="20px">
+                    <a href="">@fotografía</a>
+                    
+                </h3>
+                <h3>
+                    <img src="/static/img/contacto/ubicacion.png" height="20px" width="20px" alt="ubicacion"> Balcarce 78, C1064 C.A.B.A
+                </h3>
+                <br>
+                <div >
                     <iframe id="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.8443001789847!2d-58.374565074259685!3d-34.608098472952726!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a3352cbe276f75%3A0xe16921ef0545f86d!2sCasa%20Rosada!5e0!3m2!1ses-419!2sar!4v1715489720022!5m2!1ses-419!2sar" width="300" height="225" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
 
-            <section>
-
-                <div id="formulario">
+        <section class="formato-formulario">
                     <form action="mailto:fotografias@fotografias.com">
                         <br>
                         <div>
-                            <label for="nombre">Nombre
-                            <br><input type="text" name="nombre" required>
+                            <input type="hidden" name="id" value="{{contacto[0]}}">
+                        </div>
+                        <div>
+                            <h3>
+
+                                Los campos con * son obligatorios
+                            </h3>
+                        </div>
+                        <br>
+                        <div>
+                            <label for="nombre">Nombre*
+                            <br>
+                            <input placeholder="Carolina"  type="text" name="nombre" required>
                         </label>
                         </div>
                         <div>
-                            <label for="mail">Mail <br><input type="text"></label>
+                            <label for="apellido">Apellido*
+                            <br>
+                            <input  placeholder="Silva" type="text" name="apellido" required>
+                            </label>
+                        </div>
+                        <div>
+                            <label for="mail">Mail* 
+                            <br>
+                            <input  placeholder="Carolina.Silva@example.com" type="text" name="mail" required>
+                            </label>
                             
                         </div>
                         <div>
-                            <label for="Telefono">Telefono <br><input type="text" required></label>
+                            <label for="telefono">Teléfono* 
+                            <br>
+                            <input placeholder="11 5856-0202" type="number" name="telefono" required>
+                            </label>
                             
                         </div>
             
                         <div>
-                            <label for="fecha">Fecha del evento (mm/dd/yyyy) <br><input type="date"></label>
+                            <label for="fecha">Fecha del evento (dd/mm/yyyy)* 
+                            <br>
+                            <input type="date" name="fecha_evento">
+                            </label>
                             
                         </div>
                         
                         <div>
-                            <label for="mensaje">Mensaje <br>
-                                <textarea name="mensaje" id="" maxlength="1500" minlength="50" cols="30" rows="10"></textarea></label>
+                            <label for="mensaje">Mensaje 
+                                <br>
+                                <textarea placeholder="Escribe aquí tu mensaje..." name="mensaje" id="" maxlength="1500" minlength="20" cols="30" rows="10"></textarea>
+                            </label>
                             
                         </div>
-                        <div>
-                            <button>Enviar</button>
-                        </div>
+                        <section>
+                            <h4>
+                                Sí, he leído la declaración de protección de datos y acepto que los datos que proporcioné anteriormente se recopilen y almacenen electrónicamente. Mis datos sólo se utilizarán estrictamente con la finalidad de procesar y responder a mi consulta y no serán cedidos a terceros. Al enviar el formulario de contacto, acepto el tratamiento.
+                            </h4>
+                        </section>
+                    <div>
+                        <button class="button" >
+                            <img src="/static/img/contacto/enviar.png" height="30px" width="30px" alt="enviar">
+                            Enviar
+                        </button>
+                    </div>
                 
-                    </form>   
-                </div>
-            </section>
-    </div>
+                 </form>   
+            
+    
+        </section>
 
+        </div>  
 
-    <div class="separacion">
-        <br>
-    </div>
-
-    <section class="seccion-imagenes">
-        <h2 style="color:rgb(0, 0, 0)">Contactos registrados:</h2>
-        <div style="color: rgb(0, 0, 0);">
-            <h3>
-                {%for i in contacto%}
-                <br> Nombre: {{i[1]}} / <br> Mail: {{i[2]}} /<br> Teléfono: {{i[3]}} / <br> Fecha de evento: {{i [4]}}  
-                <hr>
-                {%endfor%}
-            </h3>
+        <div class="separacion">
+            <br>
         </div>
-    </section>
+        
 
-    <div class="separacion">
-        <br>
-    </div>
+        </div>        
+        <h2  class="titulo-contacto" style="text-decoration-line:underline;">
+            <img src="/static/img/contacto/agenda.png" height="100px" width="100px" alt="agenda">
+            CONTACTOS REGISTRADOS:
+        </h2>
+        </div>
 
-    {% include 'defaults/footer.html' %}
+        <section>
+
+            <div style="color: rgb(0, 0, 0)">
+                
+                <div style="display: flex;">
+                    {%for i in contacto%}
+                    <h3 class="cont-contacto" >
+                        <br>Contacto: {{i[0]}}
+                        <br> Nombre:{{i[1]}}  
+                        <br>Apellido:{{i[2]}}
+                        <br> Mail: {{i[3]}}
+                        <br> Teléfono: {{i[4]}}
+                        <br> Fecha de Evento: {{i[5]}} 
+
+                        <div>
+                            <a href="/editar_contacto/{{i[0]}}">Editar</a>
+                            <a href="/borrar_contacto/{{i[0]}}">Borrar</a>
+                        </div>
+                    </h3>
+                    
+                </div>
+                
+                
+                {%endfor%}
+            </div>
+            
+            <div class= "seccion-imagenes">
+                <h3 style="color:rgb(0, 0, 0)">
+                    
+                    <a href="/cargar_contacto" class="btn btn-warning " style="color: black"> Agregar Contacto</a>
+                </h3>
+            </div>
+        </section>
+    
+
+        <div class="separacion">
+            <br>
+        </div>
+
+
+        {% include 'defaults/footer.html' %}
 
     
 </body>
